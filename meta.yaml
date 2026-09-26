@@ -1,0 +1,39 @@
+# 关注用户列表
+target_users:
+  - "123"
+
+# 黑名单前缀（代码中已注释掉调用点，需要时取消注释）
+blacklist:
+  enabled: false
+  prefixes:
+    - "管理后台"
+    - "后台管理"
+    - "喜报"
+    - "悲报"
+
+# 单个 txt 文件大小上限（KB）
+txt_max_size_kb: 500
+
+# 合并消息最大展开层数
+forward_max_depth: 2
+
+# all 目录开关
+save_all: true
+
+# 补抓最大条数
+catch_up_max_count: 200
+
+# 启动后等待秒数
+startup_wait_sec: 60
+
+# 每页拉取间隔秒数
+fetch_interval_sec: 30
+
+# 每页拉取条数
+fetch_page_size: 20
+
+# 日文占比阈值（0.3 = 30%）
+japanese_ratio: 0.3
+
+# 图片下载并发数
+download_concurrency: 1
