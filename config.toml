@@ -1,0 +1,46 @@
+# 私聊消息归档插件配置（改写自 nonebot-plugin-chatdownload）
+# 修改后由 MaiBot Runner 自动热更新（on_config_update）
+
+# 要归档的用户 QQ 号列表（字符串）—— 必填，否则不保存任何消息
+target_users = []
+
+# 归档保存根目录：留空用 Host 分配的插件数据目录
+save_dir = ""
+
+# 所有文本写进一个 txt（<= 0 = 不滚动），即 txt/all.txt
+txt_max_lines = 0
+
+# 是否写每周完整日志 all/YYYY-Www.jsonl
+save_all = true
+
+# 单次补抓最大条数（防止首次运行拉太多）
+catch_up_max_count = 200
+
+# 补抓时间窗口（天）：只补最近 N 天的历史，0 = 不限制
+catch_up_max_days = 14
+
+# 启动后等待秒数（等 Host 与适配器稳定）
+startup_wait_sec = 60
+
+# 每页拉取间隔秒数（控制数据库查询频率）
+fetch_interval_sec = 30
+
+# 每页拉取条数
+fetch_page_size = 20
+
+# 日文判定阈值（0.3 = 假名占比 30%）
+japanese_ratio = 0.3
+
+# 图片/文件下载并发数
+download_concurrency = 1
+
+# 文本按分类分文件（关闭 = 全部进同一个 txt/all.txt）
+classify_txt = false
+
+# 黑名单前缀过滤
+blacklist_enabled = false
+blacklist_prefixes = ["管理后台", "后台管理", "喜报", "悲报"]
+
+[plugin]
+enabled = true
+config_version = "0.2.0"

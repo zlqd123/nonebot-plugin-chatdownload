@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "id": "user.chatdownload",
+  "version": "0.2.0",
+  "name": "私聊消息归档",
+  "description": "持续监听指定用户的私聊消息，文本写入单个 txt，图片/文件下载到本地，保留每周完整 JSONL 日志。改写自 nonebot-plugin-chatdownload。",
+  "author": {
+    "name": "user",
+    "url": "https://github.com/user"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/user/chatdownload",
+    "homepage": "https://github.com/user/chatdownload",
+    "documentation": "https://github.com/user/chatdownload",
+    "issues": "https://github.com/user/chatdownload/issues"
+  },
+  "host_application": {
+    "min_version": "1.3.0",
+    "max_version": "1.3.99"
+  },
+  "sdk": {
+    "min_version": "2.0.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "locales_path": "_locales",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  },
+  "capabilities": [
+    "config.get",
+    "chat.get_stream_by_user_id",
+    "chat.get_private_streams",
+    "message.get_recent",
+    "message.get_by_time_in_chat"
+  ]
+}
